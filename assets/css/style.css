@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #fa303c;
+  --secondary-color: #002339;
+}
+body {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+.container {
+  max-width: 1350px;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+p {
+  color: #8d8d8d;
+  font-size: 18px;
+  font-weight: 400;
+}
+.about {
+  background-color: #fafafa;
+  padding: 110px 0;
+}
+.primary-btn {
+  background-color: var(--primary-color);
+  color: #fff;
+  min-width: 170px;
+  display: inline-block;
+  text-align: center;
+  padding: 16px 25px;
+  border-radius: 100px;
+  text-decoration: none;
+  font-size: 18px;
+}
+.about-details p {
+  margin: 30px 0;
+}
+.about-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.about-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about-details a {
+  width: fit-content;
+}
+.about-details img {
+  width: 100%;
+}
+.google-review-box {
+  text-align: center;
+}
+.google-review-box a {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: var(--secondary-color);
+  justify-content: center;
+  width: fit-content;
+  background: #fcfcfc;
+  border: 2px solid #e3e3e3;
+  border-radius: 100px;
+  padding: 12px 20px;
+  margin: auto;
+}
+.google-review-box a img {
+  margin-right: 10px;
+}
+.google-review-box h3 {
+  color: var(--secondary-color);
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+.google-review {
+  padding: 100px 0;
+}
+
+@media only screen and (max-width: 1024px) {
+}
+@media only screen and (max-width: 767px) {
+}

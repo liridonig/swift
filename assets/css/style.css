@@ -25,6 +25,11 @@ p {
   padding-left: 15px;
   padding-right: 15px;
 }
+.col-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
 .primary-btn {
   background-color: var(--primary-color);
   color: #fff;
@@ -100,7 +105,7 @@ nav {
   color: var(--secondary-color);
 }
 .first-section-div p {
-  margin: 30px 0;
+  margin: 25px 0;
 }
 .first-section-img {
   position: absolute;
@@ -202,7 +207,7 @@ nav {
   background: #fcfcfc;
   border: 2px solid #e3e3e3;
   border-radius: 100px;
-  padding: 12px 20px;
+  padding: 13px 35px;
   margin: auto;
 }
 .google-review-box a img {
@@ -273,6 +278,66 @@ footer {
 }
 .footer-logo {
   text-align: center;
+}
+.hr {
+  width: 100%;
+  border: 2px solid #f0f0f0;
+  margin: 80px 0;
+}
+.about-details-right {
+  padding-left: 100px;
+}
+.about-details-left {
+  padding-right: 100px;
+}
+
+.services-homepage {
+  padding: 80px 0 25px 0;
+}
+.services-homepage-div {
+  display: flex;
+  flex-direction: column;
+}
+.services-homepage h2 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 45px;
+  text-align: center;
+  color: var(--secondary-color);
+  margin-bottom: 40px;
+}
+.services-homepage-box {
+  flex: 1;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 25px;
+  border-radius: 25px;
+}
+.services-homepage-box-bg {
+  background-color: var(--primary-color);
+}
+.services-homepage-box p {
+  font-weight: 400;
+  line-height: 35px;
+  color: #838383;
+}
+.services-homepage-box p span {
+  font-weight: bold;
+}
+.services-homepage-box-bg p {
+  color: #fff;
+}
+.services-homepage h3 {
+  font-size: 22px;
+  color: var(--secondary-color);
+  font-weight: 400;
+  line-height: 45px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 @media only screen and (max-width: 1024px) {
 }

@@ -38,6 +38,19 @@ p {
   border-radius: 100px;
   text-decoration: none;
   font-size: 18px;
+  font-weight: bold;
+}
+.secondary-btn {
+  background-color: #fff;
+  color: var(--primary-color);
+  min-width: 170px;
+  display: inline-block;
+  text-align: center;
+  padding: 16px 25px;
+  border-radius: 100px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
 }
 .about-details p {
   margin: 30px 0;
@@ -84,7 +97,57 @@ p {
 .google-review {
   padding: 100px 0;
 }
+.contact-us {
+  padding: 70px 0;
+}
 
+.contact-us-box {
+  border-radius: 20px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 550px 1fr;
+  overflow: hidden;
+}
+
+.contact-us-box h3 {
+  color: #fff;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 1;
+}
+.contact-us-box a {
+  margin-top: 15px;
+  width: fit-content;
+}
+.contact-us-details {
+  background-color: var(--primary-color);
+  padding: 70px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact-us-img img {
+  width: 100%;
+}
+.contact-us-img {
+  display: flex;
+  position: relative;
+}
+.contact-us-img::before {
+  position: absolute;
+  content: "";
+
+  width: 400px;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+  background: linear-gradient(
+    90deg,
+    #fa303c 5.56%,
+    rgba(250, 48, 60, 0) 93.57%
+  );
+}
 @media only screen and (max-width: 1024px) {
 }
 @media only screen and (max-width: 767px) {

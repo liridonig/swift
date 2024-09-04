@@ -40,9 +40,19 @@ p {
   text-align: center;
   display: inline-block;
   font-size: 18px;
-  font-weight: bold;
   border: 1px solid var(--primary-color);
   transition: all 0.4s;
+}
+.secondary-btn {
+  background-color: #fff;
+  color: var(--primary-color);
+  min-width: 170px;
+  display: inline-block;
+  text-align: center;
+  padding: 16px 25px;
+  border-radius: 100px;
+  text-decoration: none;
+  font-size: 18px;
 }
 @media only screen and (min-width: 1024px) {
   .primary-btn:hover {
@@ -153,30 +163,7 @@ nav {
   background-color: #fafafa;
   padding: 110px 0;
 }
-.primary-btn {
-  background-color: var(--primary-color);
-  color: #fff;
-  min-width: 170px;
-  display: inline-block;
-  text-align: center;
-  padding: 16px 25px;
-  border-radius: 100px;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-}
-.secondary-btn {
-  background-color: #fff;
-  color: var(--primary-color);
-  min-width: 170px;
-  display: inline-block;
-  text-align: center;
-  padding: 16px 25px;
-  border-radius: 100px;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-}
+
 .about-details h3 {
   color: var(--secondary-color);
   font-size: 30px;
@@ -389,14 +376,30 @@ footer {
 .hamburger {
   display: none;
 }
-.testimonails h2 {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 45px;
-  text-align: center;
-  color: var(--secondary-color);
-  margin-bottom: 40px;
+.testimonials {
+  margin: 90px 0;
+  position: relative;
+}
+.testimonials::before {
+  position: absolute;
+  content: "";
+  width: 400px;
+  height: 100%;
+  background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  transform: rotate(180deg);
+  right: 0;
+  top: 0;
+  z-index: 9;
+}
+.testimonials::after {
+  position: absolute;
+  content: "";
+  width: 400px;
+  height: 100%;
+  background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  left: 0;
+  top: 0;
+  z-index: 9;
 }
 .testimonails-box {
   background-color: #fafafa;
@@ -413,7 +416,67 @@ footer {
   margin-top: 30px;
   font-size: 20px;
 }
+.testimonials h2 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 45px;
+  text-align: center;
+  color: var(--secondary-color);
+  margin-bottom: 40px;
+}
+.testimonails-btn {
+  text-align: center;
+  margin-top: 5px;
+}
+.navigations-btn {
+  position: relative;
+  width: 140px;
+  margin: auto;
+  padding-top: 100px;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+  background-color: var(--primary-color);
+  height: 45px;
+  width: 45px;
+  border-radius: 100px;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 23px;
+}
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  padding-left: 5px;
+}
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  padding-right: 2px;
+}
+
+.menu-open .overlay {
+  position: fixed;
+  top: 68px;
+  left: 0;
+  height: 100dvh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
 @media only screen and (max-width: 1024px) {
+  .first-section-div h2 {
+    font-size: 35px;
+  }
+  .testimonials h2 {
+    margin-bottom: 20px;
+  }
+  .testimonials::after {
+    display: none;
+  }
+  .testimonials::before {
+    display: none;
+  }
   .services-homepage .col-2 {
     grid-template-columns: 1fr;
   }
@@ -486,9 +549,6 @@ footer {
   .about-details img {
     margin-bottom: 15px;
   }
-  .first-section-img {
-    position: relative;
-  }
   .first-section {
     flex-direction: column;
     padding: 150px 0 0 0;
@@ -500,6 +560,7 @@ footer {
     margin: 15px 0;
   }
   .first-section-img {
+    position: relative;
     height: 300px;
     width: 100%;
     border: 0px;
@@ -533,7 +594,6 @@ footer {
     padding: 41px 0;
     display: flex;
     justify-content: center;
-    display: flex;
     flex-direction: column;
     background-color: #fff;
     box-shadow: 0px 4px 4px #52525229;
@@ -574,8 +634,14 @@ footer {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.3);
   }
+  .first-section {
+    min-height: auto;
+  }
 }
 @media only screen and (max-width: 767px) {
+  .first-section-img {
+    height: 250px;
+  }
   .services-homepage h3 {
     margin-bottom: 0;
   }

@@ -4,14 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Swift Junk Solution</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="assets/css/swiper.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <header>
+    <header id="header">
       <div class="overlay"></div>
       <div class="container">
         <nav>
@@ -152,6 +149,7 @@
       </div>
     </section>
     <section class="testimonials">
+      <h2>See How We've Made a Difference</h2>
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -164,16 +162,54 @@
               <h3>- John Doe</h3>
             </div>
           </div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
-          <div class="swiper-slide">Slide 4</div>
-          <div class="swiper-slide">Slide 5</div>
-          <div class="swiper-slide">Slide 6</div>
-          <div class="swiper-slide">Slide 7</div>
-          <div class="swiper-slide">Slide 8</div>
-          <div class="swiper-slide">Slide 9</div>
+          <div class="swiper-slide">
+            <div class="testimonails-box">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud.
+              </p>
+              <h3>- John Doe</h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonails-box">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud.
+              </p>
+              <h3>- John Doe</h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonails-box">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud.
+              </p>
+              <h3>- John Doe</h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonails-box">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud.
+              </p>
+              <h3>- John Doe</h3>
+            </div>
+          </div>
         </div>
-        <div class="swiper-pagination"></div>
+        <div class="navigations-btn">
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+      <div class="testimonails-btn">
+        <a href="#" class="primary-btn">See More</a>
       </div>
     </section>
     <section class="contact-us">
@@ -223,22 +259,18 @@
       var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
         spaceBetween: 10,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         },
         breakpoints: {
-          640: {
+          768: {
             slidesPerView: 2,
             spaceBetween: 20,
           },
-          768: {
-            slidesPerView: 4,
-            spaceBetween: 40,
-          },
           1024: {
             slidesPerView: 3,
-            spaceBetween: 50,
+            spaceBetween: 40,
           },
         },
       });

@@ -71,6 +71,11 @@ header {
   left: 0;
   top: 0;
   z-index: 99;
+  transition: all 0.4s;
+}
+.header-active {
+  transition: all 0.4s;
+  padding: 22px 0;
 }
 nav {
   display: flex;
@@ -93,10 +98,20 @@ nav {
 }
 .navbar li:last-child a {
   background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
   color: #fff;
   padding: 18px 30px;
   border-radius: 100px;
+  transition: all 0.4s;
 }
+@media only screen and (min-width: 1024px) {
+  .navbar li:last-child a:hover {
+    background-color: #fff;
+    color: var(--primary-color);
+    transition: all 0.4s;
+  }
+}
+
 .first-section {
   min-height: 100dvh;
   display: flex;
@@ -191,6 +206,7 @@ nav {
 .google-review-box {
   text-align: center;
 }
+
 .google-review-box a {
   display: flex;
   align-items: center;
@@ -203,6 +219,13 @@ nav {
   border-radius: 100px;
   padding: 13px 35px;
   margin: auto;
+  transition: all 0.4s;
+}
+@media only screen and (min-width: 1024px) {
+  .google-review-box a:hover {
+    background-color: #e3e3e3;
+    transition: all 0.4s;
+  }
 }
 .google-review-box a img {
   margin-right: 10px;
@@ -465,6 +488,12 @@ footer {
   background-color: rgba(0, 0, 0, 0.3);
 }
 @media only screen and (max-width: 1024px) {
+  .testimonials {
+    margin: 60px 0 0 0;
+  }
+  .testimonails-box {
+    padding: 40px 15px;
+  }
   .first-section-div h2 {
     font-size: 35px;
   }
@@ -659,4 +688,8 @@ footer {
   .services-homepage h2 {
     margin-bottom: 20px;
   }
+}
+::selection {
+  background-color: var(--primary-color);
+  color: #fff;
 }

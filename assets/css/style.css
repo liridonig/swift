@@ -123,7 +123,9 @@ nav {
 }
 .first-section-div {
   max-width: 45%;
+  position: relative;
 }
+
 .first-section-div h2 {
   font-weight: 400;
   font-size: 4.8vw;
@@ -829,4 +831,36 @@ textarea:focus {
 ::selection {
   background-color: var(--primary-color);
   color: #fff;
+}
+
+.standby {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(40px);
+  transition: all 0.8s;
+}
+.fadein {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-details-img {
+  position: relative;
+}
+
+.standby .about-details-img::before {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  background-color: #fafafa;
+  transition: all 1s;
+}
+
+.fadein .about-details-img::before {
+  transition: ease-in-out 0.7s;
+  width: 0;
 }

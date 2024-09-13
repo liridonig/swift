@@ -43,26 +43,26 @@
     <div class="first-section">
       <div class="container">
         <div class="first-section-div">
-          <h2>Declutter Your Life, One Haul at a Time.</h2>
-          <p>
+          <h2 class="standby">Declutter Your Life, One Haul at a Time.</h2>
+          <p class="standby">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam.
           </p>
-          <a href="#" class="primary-btn">See More</a>
+          <a href="#" class="primary-btn standby">See More</a>
         </div>
       </div>
-      <div class="first-section-img">
+      <div class="first-section-img standby">
         <img src="assets/img/hero-img.png" />
       </div>
     </div>
     <section class="services-homepage">
       <div class="container">
-        <h2>Our Services</h2>
+        <h2 class="standby">Our Services</h2>
         <div class="col-2">
           <div class="services-homepage-div">
-            <h3>What is Inlcuded</h3>
-            <div class="services-homepage-box services-homepage-box-bg">
+            <h3 class="standby">What is Inlcuded</h3>
+            <div class="services-homepage-box services-homepage-box-bg standby">
               <p><span>1.</span> Old furniture (e.g., sofas, chairs, tables)</p>
               <p>
                 <span>2. </span>Appliances (e.g., refrigerators, washing
@@ -91,9 +91,9 @@
               <p><span>13. </span>General clutter and miscellaneous items</p>
             </div>
           </div>
-          <div class="services-homepage-div">
-            <h3>What is not Included</h3>
-            <div class="services-homepage-box">
+          <div class="services-homepage-div standby">
+            <h3 class="standby">What is not Included</h3>
+            <div class="services-homepage-box standby">
               <p><span>1.</span> Chemicals, solvents and oils</p>
               <p><span>2.</span>Asbestos</p>
               <p><span>3.</span> Storage and oil drums</p>
@@ -106,52 +106,58 @@
     <section class="google-review">
       <div class="container">
         <div class="google-review-box">
-          <h3>Leave Us a Review</h3>
-          <a href="#"><img src="assets/img/google-icon.svg" />Google Reviews</a>
+          <h3 class="standby">Leave Us a Review</h3>
+          <a href="#" class="standby"
+            ><img src="assets/img/google-icon.svg" />Google Reviews</a
+          >
         </div>
       </div>
     </section>
     <section class="about">
       <div class="container">
         <div class="about-box">
-          <div class="about-details">
-            <img src="assets/img/about1.png" />
+          <div class="about-details standby">
+            <div class="about-details-img">
+              <img src="assets/img/about1.png" />
+            </div>
           </div>
           <div class="about-details about-details-right">
-            <h3>Decluttering Solutions Tailored to You</h3>
-            <p>
+            <h3 class="standby">Decluttering Solutions Tailored to You</h3>
+            <p class="standby">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
               reprehenderit in voluptate velit esse cillum dolore eu.
             </p>
-            <a href="#" class="primary-btn">Services</a>
+            <a href="#" class="primary-btn standby">Services</a>
           </div>
         </div>
         <div class="hr"></div>
         <div class="about-box">
           <div class="about-details about-details-left">
-            <h3>Get in Touch with Our Cleanup Crew</h3>
-            <p>
+            <h3 class="standby">Get in Touch with Our Cleanup Crew</h3>
+            <p class="standby">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
               reprehenderit in voluptate velit esse cillum dolore eu.
             </p>
-            <a href="#" class="primary-btn">Contact Us</a>
+            <a href="#" class="primary-btn standby">Contact Us</a>
           </div>
-          <div class="about-details">
-            <img src="assets/img/about1.png" />
+          <div class="about-detail standby">
+            <div class="about-details-img">
+              <img src="assets/img/about1.png" />
+            </div>
           </div>
         </div>
       </div>
     </section>
     <section class="testimonials">
-      <h2>See How We've Made a Difference</h2>
+      <h2 class="standby">See How We've Made a Difference</h2>
       <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
+        <div class="swiper-wrapper standby">
           <div class="swiper-slide">
             <div class="testimonails-box">
               <p>
@@ -209,10 +215,10 @@
         </div>
       </div>
       <div class="testimonails-btn">
-        <a href="#" class="primary-btn">See More</a>
+        <a href="#" class="primary-btn standby">See More</a>
       </div>
     </section>
-    <section class="contact-us">
+    <section class="contact-us standby">
       <div class="container">
         <div class="contact-us-box">
           <div class="contact-us-details">
@@ -256,6 +262,23 @@
     <script src="assets/js/swiper.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
+      // fadde on scroll
+      const boxes = document.querySelectorAll(".standby");
+
+      function checkBox() {
+        const trigerBottom = (window.innerHeight / 5) * 4;
+        boxes.forEach((box) => {
+          const boxTop = box.getBoundingClientRect().top;
+          if (boxTop < trigerBottom) {
+            box.classList.add("fadein");
+          } else {
+            box.classList.remove("fadein");
+          }
+        });
+      }
+      window.addEventListener("scroll", checkBox);
+      checkBox();
+
       var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
         spaceBetween: 10,

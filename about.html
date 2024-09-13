@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swift Junk Solution</title>
+    <link rel="stylesheet" href="assets/css/swiper.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div class="overlay"></div>
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <a href="#"><img src="assets/img/logo.svg" /></a>
+          </div>
+          <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+          <ul id="menu-header-menu" class="navbar">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="index.html">Services</a>
+            </li>
+            <li>
+              <a href="index.html">Contact</a>
+            </li>
+            <li>
+              <a href="about.html">About</a>
+            </li>
+            <li>
+              <a href="index.html">Call Us Now</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="about-page">
+      <div class="container">
+        <div class="about-page-div">
+          <img src="assets/img/about.png" />
+          <h3>About Us</h3>
+          <p>
+            Lorem ipsum odor amet, consectetuer adipiscing elit. Nec inceptos
+            est elit pulvinar suspendisse non lectus vulputate. Consequat aptent
+            fames placerat elit vehicula orci eros. Varius blandit felis nam
+            vitae ad. Integer cras etiam ipsum urna primis dapibus orci urna.
+            Curabitur finibus non cursus nam torquent imperdiet massa sociosqu
+            arcu. Vel volutpat mus proin velit felis.
+          </p>
+          <p>
+            Sollicitudin ex sit convallis semper natoque luctus vel. Inceptos
+            iaculis purus pharetra ac urna. Varius risus id praesent sociosqu,
+            tortor ultricies. Aliquam iaculis tempor justo habitant conubia.
+            Odio tempus justo ad netus bibendum. Cursus facilisi accumsan
+            sociosqu adipiscing penatibus ac. Scelerisque euismod magna suscipit
+            ac hendrerit ante efficitur metus quis.
+          </p>
+          <p>
+            Leo finibus penatibus adipiscing curae phasellus lobortis. Sem dui
+            sollicitudin; ligula aliquam class id. Lorem ipsum odor amet,
+            consectetuer adipiscing elit. Nec inceptos est elit pulvinar
+            suspendisse non lectus vulputate. Consequat aptent fames placerat
+            elit vehicula orci eros. Varius blandit felis nam vitae ad. Integer
+            cras etiam ipsum urna primis dapibus orci urna. Curabitur finibus
+            non cursus nam torquent imperdiet massa sociosqu arcu.
+          </p>
+          <a href="#" class="primary-btn">Contact Us</a>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="footer-logo">
+          <a href="#"> <img src="assets/img/footer-logo.svg" /></a>
+        </div>
+        <div class="contact-details">
+          <a href="#">example@mail.com</a>
+          <a href="#">(111) 222-3333</a>
+        </div>
+        <div class="socials-icons">
+          <a href="#" target="_blank"><img src="assets/img/insta.svg" /></a>
+          <a href="#" target="_blank"><img src="assets/img/fb.svg" /></a>
+          <a href="#" target="_blank"><img src="assets/img/yelp.svg" /></a>
+        </div>
+        <div class="footer-box">
+          <div class="footer-privary-policy">
+            <a>Privacy & Policy</a>
+          </div>
+          <div class="footer-copyright">
+            <a>© 2024 Swift Junk Solutions. All rights reserved.</a>
+          </div>
+          <div class="footer-terms">
+            <a>Terms & Conditions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/js/swiper.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
